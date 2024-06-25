@@ -10,7 +10,7 @@ export default class IndexRoute extends Route {
 
     const users = await this.store.findAll<UserModel>('user', {
       // Error "Type 'string' is not assignable to type 'undefined[]'.ts(2322)"
-      include: 'pet',
+      include: 'pets',
     });
 
     const firstUser = users[0];

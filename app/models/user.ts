@@ -5,7 +5,7 @@ import type { Type } from '@warp-drive/core-types/symbols';
 export default class UserModel extends Model {
   @attr('string') declare name: string;
 
-  @hasMany('pet', { async: false, inverse: 'user' }) declare users?: PetModel[];
+  @hasMany('pet', { async: false, inverse: 'user' }) declare pets?: PetModel[];
 
   relationshipNames() {
     // Error "Property 'relationshipsByName' does not exist on type 'Function'."
