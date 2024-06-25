@@ -19,7 +19,7 @@ export default class IndexRoute extends Route {
       // Error Argument of type 'string | null' is not assignable to parameter of type 'string | number'.
       // Type 'null' is not assignable to type 'string | number'.ts(2345)
       user = await this.store.findRecord<UserModel>('user', firstUser.id, {
-        include: 'pet',
+        include: 'pets',
       });
     }
 
